@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   getDays(mounth);
 
-  // mese successivo
+  // mese successivo click
   $('.next-mounth').on('click', function() {
     mounth = mounth + 1;
     if (mounth > 11) {
@@ -14,7 +14,7 @@ $(document).ready(function () {
       getDays(mounth);
     }
   });
-  // mese precedente
+  // mese precedente click
   $('.prev-mounth').on('click', function() {
     mounth = mounth - 1;
     if (mounth < 0) {
@@ -25,7 +25,33 @@ $(document).ready(function () {
       getDays(mounth);
     }
   });
+  // cambio mese da tastiera
+  $(document).keydown(
+    function(){
 
+      if (event.which == 39 || event.keycode == 39){
+        mounth = mounth + 1;
+        if (mounth > 11) {
+          alert('Calendario 2019 non pronto!');
+        }
+        else {
+          $('.mounth-days').text('');
+          getDays(mounth);
+        }
+      }
+      else if (event.which == 37 || event.keycode == 37){
+        mounth = mounth - 1;
+        if (mounth < 0) {
+          alert('Calendario 2017 non selezionabile!');
+        }
+        else {
+          $('.mounth-days').text('');
+          getDays(mounth);
+        }
+      }
+    }
+  );
+  // ------------
 });
 
 
@@ -35,7 +61,7 @@ function getDays(mounth) {
   var mounthsName = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
   // calcolo i giorni del mese
   var daysInMounth = moment("2018-"+(mounth+1), "YYYY-MM").daysInMonth();
-  $('.mounth-name').text(mounthsName[mounth]);
+  $('.mounth-name').text(mounthsName[mounth]+' 2018');
   // ciclo per i giorni e creo tanti <li> quanti sono i giorni
   var day=0;
   var mounthAttr = mounth +1;

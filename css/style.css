@@ -29,3 +29,7 @@ nav{
 .mounth-days{
   padding: 15px;
 }
+.prev-mounth,
+.next-mounth{
+  cursor: pointer;
+}

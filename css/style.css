@@ -8,8 +8,8 @@ body{
   height: 100vh;
 }
 .mounth{
-  width: 500px;
-  height: 900px;
+  padding: 15px;
+  width: 700px;
   margin: auto;
   border: 1px solid red;
 }
@@ -27,8 +27,29 @@ nav{
   padding: 15px;
 }
 .mounth-days{
-  padding: 15px;
+  /* padding: 15px; */
+  width: 100%;
+  height: 100%;
 }
+.mounth-days li{
+  float: left;
+  width: calc(100%/7);
+  height: 100px;
+  list-style: none;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.event{
+  text-align: center;
+}
+.event-day{
+  font-weight: 700;
+  color: red;
+}
+
 .prev-mounth,
 .next-mounth{
   cursor: pointer;

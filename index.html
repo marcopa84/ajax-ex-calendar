@@ -14,7 +14,7 @@
 <body>
   <div class="mounth">
     <div class="mounth-name">
-      
+
     </div>
     <nav>
       <div class="prev-mounth"> &lt;-- Mese precedente </div>
@@ -25,7 +25,10 @@
   </div>
   <!-- template -->
   <script id="entry-template" type="text/x-handlebars-template">
-  <li class="entry">{{day}}</li>
+  <li class="entry" data-date="{{attr}}">
+    {{day}}
+    <div class="event"></div>
+  </li>
   </script>
   <!-- /template -->
   <script src="js/script.js" charset="utf-8"></script>

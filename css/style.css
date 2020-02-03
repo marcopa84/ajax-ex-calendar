@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  height: 100vh;
+}
+.mounth{
+  width: 500px;
+  height: 900px;
+  margin: auto;
+  border: 1px solid red;
+}
+.mounth-name{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px;
+}
+.mounth-days{
+  padding: 15px;
+}

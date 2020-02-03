@@ -6,10 +6,12 @@
 body{
   display: flex;
   height: 100vh;
+  background-image: url(../img/sfondo.jpg);
+  background-size: cover;
 }
 .mounth{
   padding: 15px;
-  width: 700px;
+  width: 80%;
   margin: auto;
   border: 1px solid red;
 }
@@ -33,7 +35,8 @@ nav{
 }
 .mounth-days li{
   float: left;
-  width: calc(100%/7);
+  width: calc(100%/8);
+  margin: 10px;
   height: 100px;
   list-style: none;
   border: 1px solid black;
@@ -41,9 +44,11 @@ nav{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: white;
 }
 .event{
   text-align: center;
+  width: 100%;
 }
 .event-day{
   font-weight: 700;

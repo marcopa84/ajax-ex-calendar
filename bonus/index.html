@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://momentjs.com/downloads/moment-with-locales.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js" integrity="sha256-MlbTFXdOM7EZphnz0OyXQqPt2zBOjfRXCq14CfgSsS0=" crossorigin="anonymous"></script>
+
+  <title>Calendar</title>
+</head>
+<body>
+  <div class="mounth">
+    <div class="mounth-name">
+
+    </div>
+    <nav>
+      <div class="prev-mounth"> &lt;-- Mese precedente </div>
+      <div class="next-mounth"> Mese successivo --&gt; </div>
+    </nav>
+    <ul class="mounth-days">
+    </ul>
+  </div>
+  <!-- template -->
+  <script id="entry-template" type="text/x-handlebars-template">
+  <li class="entry" data-date="{{attr}}">
+    {{day}}
+    <div class="event"></div>
+  </li>
+  </script>
+  <!-- /template -->
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>

@@ -60,7 +60,8 @@ function getDays(mounth) {
     // calcolo i giorni del mese
   moment.locale('it');
   var daysInMounth = moment("2018-"+(mounth+1), "YYYY-MM").daysInMonth();
-  $('.mounth-name').text(moment.months(mounth)+' 2018');
+  var mounthTitle = (moment.months(mounth)).toUpperCase();
+  $('.mounth-name').text(mounthTitle+' 2018');
   // ciclo per i giorni e creo tanti <li> quanti sono i giorni
   var day=0;
   var mounthAttr = mounth +1;
